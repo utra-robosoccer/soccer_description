@@ -5,8 +5,8 @@
 			<author> SimLab Soft http://www.simLab-soft.com </author>
 			<authoring_tool>SimLab Collada Exporter for Fusion 360</authoring_tool>
 		</contributor>
-		<created>2018-08-05T23:40:29</created>
-		<modified>2018-08-05T23:40:29</modified>
+		<created>2018-08-05T23:44:56</created>
+		<modified>2018-08-05T23:44:56</modified>
 		<unit meter="1.000000000000000" name="Meter"/>
 		<up_axis>Z_UP</up_axis>
 	</asset>
@@ -15,13 +15,13 @@
 			<node>
 				<matrix> 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 </matrix>
 				<node  id="ID0" name="Camera_2">
-					<matrix> 1 0 0 -0.012 0 0 -1 -0.759 0 1 0 -0.033125 0 0 0 1 </matrix>
+					<matrix> 1 0 0 0.012 0 0 -1 -0.759 0 1 0 -0.033125 0 0 0 1 </matrix>
 					<instance_camera url="#ID1" />
 				</node>
 				<node  id="ID2" name="Torso_for_simulation_v5">
 					<matrix> 0.01 0 0 0 0 0 -0.01 0 0 0.01 0 0 0 0 0 1 </matrix>
 					<node  id="ID3" name="torso_main_v2">
-						<matrix> 0 0 -1 3.6 0 1 0 -5.2 1 0 0 0 0 0 0 1 </matrix>
+						<matrix> 0 0 1 -3.6 0 1 0 -5.2 -1 0 0 0 0 0 0 1 </matrix>
 						<node  id="ID4" name="Main">
 							<matrix> 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 </matrix>
 							<node  id="ID5" name="Main_Plastic_-_Glossy_(Black)">
@@ -39,7 +39,7 @@
 						</node>
 					</node>
 					<node  id="ID8" name="torso_front_v3">
-						<matrix> 0 0 -1 3.6 0 1 0 -5.2 1 0 0 0 0 0 0 1 </matrix>
+						<matrix> 0 0 1 -3.6 0 1 0 -5.2 -1 0 0 0 0 0 0 1 </matrix>
 						<node  id="ID9" name="Front_(1)">
 							<matrix> 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 </matrix>
 							<node  id="ID10" name="Front_(1)_Plastic_-_Matte_(Red)">
@@ -57,7 +57,7 @@
 						</node>
 					</node>
 					<node  id="ID13" name="back_panel_4.0_v7">
-						<matrix> 0 0 -1 3.6 0 1 0 -5.2 1 0 0 0 0 0 0 1 </matrix>
+						<matrix> 0 0 1 -3.6 0 1 0 -5.2 -1 0 0 0 0 0 0 1 </matrix>
 						<node  id="ID14" name="Back_(2)">
 							<matrix> 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 </matrix>
 							<node  id="ID15" name="Back_(2)_Plastic_-_Glossy_(Black)">
@@ -75,7 +75,7 @@
 						</node>
 					</node>
 					<node  id="ID17" name="AX12_v4">
-						<matrix> 0 -1 0 8 1 0 0 0 0 0 1 0 0 0 0 1 </matrix>
+						<matrix> 0 1 0 -8 1 0 0 0 0 0 -1 0 0 0 0 1 </matrix>
 						<node  id="ID18" name="ax12_wheel">
 							<matrix> 0 1 0 5.9 0.998971 0 0.045363 10.4 0.045363 0 -0.998971 0 0 0 0 1 </matrix>
 							<node  id="ID19" name="Body1">
@@ -149,7 +149,7 @@
 			</optics>
 			<extra>
 				<technique  >
-					<camera_target type="float">-0.012 -2.33458e-12 -0.033125</camera_target>
+					<camera_target type="float">0.012 -2.33458e-12 -0.033125</camera_target>
 				</technique>
 			</extra>
 		</camera >
@@ -349,16 +349,16 @@
 		</geometry>
 	</library_geometries>
 	<library_materials>
-		<material id="ID12" name="Plastic_-_Matte_(Red)">
+		<material id="ID31" name="AX12">
 			<instance_effect url="#ID32"/>
 		</material>
-		<material id="ID22" name="Glossy_-_Black">
+		<material id="ID12" name="Plastic_-_Matte_(Red)">
 			<instance_effect url="#ID33"/>
 		</material>
-		<material id="ID31" name="AX12">
+		<material id="ID7" name="Plastic_-_Glossy_(Black)">
 			<instance_effect url="#ID34"/>
 		</material>
-		<material id="ID7" name="Plastic_-_Glossy_(Black)">
+		<material id="ID22" name="Glossy_-_Black">
 			<instance_effect url="#ID35"/>
 		</material>
 	</library_materials>
@@ -370,7 +370,7 @@
 						<emission><color>0 0 0 1</color></emission>
 						<ambient><color>0 0 0 1</color></ambient>
 						<diffuse>
-							<color>0 0 0 1</color>
+							<color>0.960784 0.960784 0.964706 1</color>
 						</diffuse>
 						<specular><color>1 1 1 1</color></specular>
 						<transparent opaque="A_ONE"><color>1.0 1.0 1.0 1.0</color></transparent>
@@ -388,7 +388,7 @@
 						<diffuse>
 							<color>0 0 0 1</color>
 						</diffuse>
-						<specular><color>0 0 0 1</color></specular>
+						<specular><color>1 1 1 1</color></specular>
 						<transparent opaque="A_ONE"><color>1.0 1.0 1.0 1.0</color></transparent>
 						<transparency><float>1</float></transparency>
 					</phong>
@@ -402,7 +402,7 @@
 						<emission><color>0 0 0 1</color></emission>
 						<ambient><color>0 0 0 1</color></ambient>
 						<diffuse>
-							<color>0.960784 0.960784 0.964706 1</color>
+							<color>0.0980392 0.0980392 0.0980392 1</color>
 						</diffuse>
 						<specular><color>1 1 1 1</color></specular>
 						<transparent opaque="A_ONE"><color>1.0 1.0 1.0 1.0</color></transparent>
@@ -418,9 +418,9 @@
 						<emission><color>0 0 0 1</color></emission>
 						<ambient><color>0 0 0 1</color></ambient>
 						<diffuse>
-							<color>0.0980392 0.0980392 0.0980392 1</color>
+							<color>0 0 0 1</color>
 						</diffuse>
-						<specular><color>1 1 1 1</color></specular>
+						<specular><color>0 0 0 1</color></specular>
 						<transparent opaque="A_ONE"><color>1.0 1.0 1.0 1.0</color></transparent>
 						<transparency><float>1</float></transparency>
 					</phong>
