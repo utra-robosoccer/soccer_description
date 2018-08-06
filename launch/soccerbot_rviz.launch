@@ -1,5 +1,5 @@
 <launch>
-  <param name="robot_description" textfile="$(find soccer_description)/models/soccerbot_noarms/model.urdf" />
+  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find soccer_description)/models/soccerbot/model.xacro'" />
 
   <!-- send fake joint values -->
   <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
