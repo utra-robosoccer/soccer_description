@@ -5,8 +5,8 @@
 			<author> SimLab Soft http://www.simLab-soft.com </author>
 			<authoring_tool>SimLab Collada Exporter for Fusion 360</authoring_tool>
 		</contributor>
-		<created>2018-08-06T00:03:37</created>
-		<modified>2018-08-06T00:03:37</modified>
+		<created>2018-08-06T00:55:41</created>
+		<modified>2018-08-06T00:55:41</modified>
 		<unit meter="1.000000000000000" name="Meter"/>
 		<up_axis>Z_UP</up_axis>
 	</asset>
@@ -15,13 +15,13 @@
 			<node>
 				<matrix> 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 </matrix>
 				<node  id="ID0" name="Camera_2">
-					<matrix> 1 0 0 -0.000324999 0 0 -1 -0.438213 0 1 0 0.0438188 0 0 0 1 </matrix>
+					<matrix> 1 0 0 -3.6383e-05 0 0 -1 -0.438575 0 1 0 0.0438188 0 0 0 1 </matrix>
 					<instance_camera url="#ID1" />
 				</node>
-				<node  id="ID2" name="calf_link_v4">
+				<node  id="ID2" name="right_calve_link_v4">
 					<matrix> 0.01 0 0 0 0 0 -0.01 0 0 0.01 0 0 0 0 0 1 </matrix>
 					<node  id="ID3" name="MX-28T_R_v6">
-						<matrix> 0 0 1 0.05 0 1 0 8.66 -1 0 0 -0.0036383 0 0 0 1 </matrix>
+						<matrix> -1 0 0 -0.0036383 0 1 0 8.66 0 0 -1 -0.05 0 0 0 1 </matrix>
 						<node  id="ID4" name="Body1">
 							<matrix> 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 </matrix>
 							<node  id="ID5" name="Body1_Paint_-_Metallic_(Black)">
@@ -177,7 +177,7 @@
 						</node>
 					</node>
 					<node  id="ID38" name="bottom_piece_v19">
-						<matrix> 0 0 -1 -0.125 0 1 0 4.5 1 0 0 0.4 0 0 0 1 </matrix>
+						<matrix> 1 0 0 0.4 0 1 0 4.5 0 0 1 0.125 0 0 0 1 </matrix>
 						<node  id="ID39" name="Body1">
 							<matrix> 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 </matrix>
 							<node  id="ID40" name="Body1_Paint_-_Metallic_(Red)">
@@ -205,14 +205,14 @@
 					<perspective>
 						<yfov>45</yfov>
 						<aspect_ratio>1.33333</aspect_ratio>
-						<znear>0.0046379</znear>
-						<zfar>46.379</zfar>
+						<znear>0.00469723</znear>
+						<zfar>46.9723</zfar>
 					</perspective>
 				</technique_common>
 			</optics>
 			<extra>
 				<technique  >
-					<camera_target type="float">-0.000324999 3.6383e-05 0.0438188</camera_target>
+					<camera_target type="float">-3.6383e-05 -0.000324999 0.0438188</camera_target>
 				</technique>
 			</extra>
 		</camera >
@@ -572,53 +572,21 @@
 		</geometry>
 	</library_geometries>
 	<library_materials>
-		<material id="ID16" name="Steel_-_Satin">
+		<material id="ID7" name="Paint_-_Metallic_(Black)">
 			<instance_effect url="#ID43"/>
 		</material>
-		<material id="ID12" name="Paint_-_Metallic_(Dark_Grey)">
+		<material id="ID42" name="Paint_-_Metallic_(Red)">
 			<instance_effect url="#ID44"/>
 		</material>
-		<material id="ID7" name="Paint_-_Metallic_(Black)">
+		<material id="ID16" name="Steel_-_Satin">
 			<instance_effect url="#ID45"/>
 		</material>
-		<material id="ID42" name="Paint_-_Metallic_(Red)">
+		<material id="ID12" name="Paint_-_Metallic_(Dark_Grey)">
 			<instance_effect url="#ID46"/>
 		</material>
 	</library_materials>
 	<library_effects>
 		<effect id="ID43">
-			<profile_COMMON>
-				<technique sid="standard">
-					<phong>
-						<emission><color>0 0 0 1</color></emission>
-						<ambient><color>0 0 0 1</color></ambient>
-						<diffuse>
-							<color>0.627451 0.627451 0.627451 1</color>
-						</diffuse>
-						<specular><color>1 1 1 1</color></specular>
-						<transparent opaque="A_ONE"><color>1.0 1.0 1.0 1.0</color></transparent>
-						<transparency><float>1</float></transparency>
-					</phong>
-				</technique>
-			</profile_COMMON>
-		</effect>
-		<effect id="ID44">
-			<profile_COMMON>
-				<technique sid="standard">
-					<phong>
-						<emission><color>0 0 0 1</color></emission>
-						<ambient><color>0 0 0 1</color></ambient>
-						<diffuse>
-							<color>0.34902 0.34902 0.34902 1</color>
-						</diffuse>
-						<specular><color>1 1 1 1</color></specular>
-						<transparent opaque="A_ONE"><color>1.0 1.0 1.0 1.0</color></transparent>
-						<transparency><float>1</float></transparency>
-					</phong>
-				</technique>
-			</profile_COMMON>
-		</effect>
-		<effect id="ID45">
 			<profile_COMMON>
 				<technique sid="standard">
 					<phong>
@@ -634,7 +602,7 @@
 				</technique>
 			</profile_COMMON>
 		</effect>
-		<effect id="ID46">
+		<effect id="ID44">
 			<profile_COMMON>
 				<technique sid="standard">
 					<phong>
@@ -642,6 +610,38 @@
 						<ambient><color>0 0 0 1</color></ambient>
 						<diffuse>
 							<color>0.768627 0.207843 0.152941 1</color>
+						</diffuse>
+						<specular><color>1 1 1 1</color></specular>
+						<transparent opaque="A_ONE"><color>1.0 1.0 1.0 1.0</color></transparent>
+						<transparency><float>1</float></transparency>
+					</phong>
+				</technique>
+			</profile_COMMON>
+		</effect>
+		<effect id="ID45">
+			<profile_COMMON>
+				<technique sid="standard">
+					<phong>
+						<emission><color>0 0 0 1</color></emission>
+						<ambient><color>0 0 0 1</color></ambient>
+						<diffuse>
+							<color>0.627451 0.627451 0.627451 1</color>
+						</diffuse>
+						<specular><color>1 1 1 1</color></specular>
+						<transparent opaque="A_ONE"><color>1.0 1.0 1.0 1.0</color></transparent>
+						<transparency><float>1</float></transparency>
+					</phong>
+				</technique>
+			</profile_COMMON>
+		</effect>
+		<effect id="ID46">
+			<profile_COMMON>
+				<technique sid="standard">
+					<phong>
+						<emission><color>0 0 0 1</color></emission>
+						<ambient><color>0 0 0 1</color></ambient>
+						<diffuse>
+							<color>0.34902 0.34902 0.34902 1</color>
 						</diffuse>
 						<specular><color>1 1 1 1</color></specular>
 						<transparent opaque="A_ONE"><color>1.0 1.0 1.0 1.0</color></transparent>

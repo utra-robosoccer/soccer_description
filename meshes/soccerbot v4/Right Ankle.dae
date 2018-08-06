@@ -5,8 +5,8 @@
 			<author> SimLab Soft http://www.simLab-soft.com </author>
 			<authoring_tool>SimLab Collada Exporter for Fusion 360</authoring_tool>
 		</contributor>
-		<created>2018-08-06T00:01:21</created>
-		<modified>2018-08-06T00:01:21</modified>
+		<created>2018-08-06T00:55:07</created>
+		<modified>2018-08-06T00:55:07</modified>
 		<unit meter="1.000000000000000" name="Meter"/>
 		<up_axis>Z_UP</up_axis>
 	</asset>
@@ -15,13 +15,13 @@
 			<node>
 				<matrix> 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 </matrix>
 				<node  id="ID0" name="Camera_2">
-					<matrix> 1 0 0 0.002175 0 0 -1 -0.320778 0 1 0 0.0133 0 0 0 1 </matrix>
+					<matrix> 1 0 0 -0.0210247 0 0 -1 -0.339628 0 1 0 0.0133 0 0 0 1 </matrix>
 					<instance_camera url="#ID1" />
 				</node>
 				<node  id="ID2" name="right_ankle_v6">
 					<matrix> 0.01 0 0 0 0 0 -0.01 0 0 0.01 0 0 0 0 0 1 </matrix>
 					<node  id="ID3" name="MX-28T_R_v6">
-						<matrix> 0 0 1 0 0 -1 0 0 1 0 0 0 0 0 0 1 </matrix>
+						<matrix> 1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 </matrix>
 						<node  id="ID4" name="Body1">
 							<matrix> 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 </matrix>
 							<node  id="ID5" name="Body1_Paint_-_Metallic_(Black)">
@@ -177,7 +177,7 @@
 						</node>
 					</node>
 					<node  id="ID38" name="MX-28T_R_v6">
-						<matrix> -1 0 0 0 0 -1 0 0 0 0 1 -4.45 0 0 0 1 </matrix>
+						<matrix> 0 0 1 -4.45 0 -1 0 0 1 0 0 0 0 0 0 1 </matrix>
 						<node  id="ID39" name="Body1">
 							<matrix> 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 </matrix>
 							<node  id="ID40" name="Body1_Paint_-_Metallic_(Black)">
@@ -333,7 +333,7 @@
 						</node>
 					</node>
 					<node  id="ID70" name="right_upper_bracket_v8">
-						<matrix> 0 0 -1 -6 0 1 0 0 1 0 0 0 0 0 0 1 </matrix>
+						<matrix> 1 0 0 0 0 1 0 0 0 0 1 6 0 0 0 1 </matrix>
 						<node  id="ID71" name="robin_comp">
 							<matrix> -1 0 0 6.25 0 1 0 -0.95 0 0 -1 8.7 0 0 0 1 </matrix>
 							<node  id="ID72" name="Body1">
@@ -354,7 +354,7 @@
 						</node>
 					</node>
 					<node  id="ID76" name="right_upper_bracket_v8">
-						<matrix> 0.0871557 0 0.996195 0 0 -1 0 12 0.996195 0 -0.0871557 0 0 0 0 1 </matrix>
+						<matrix> 0.996195 0 -0.0871557 0 0 -1 0 12 -0.0871557 0 -0.996195 0 0 0 0 1 </matrix>
 						<node  id="ID77" name="robin_comp">
 							<matrix> -0.996195 0 -0.0871557 7.50741 0 1 0 8.55 0.0871557 0 -0.996195 14.0993 0 0 0 1 </matrix>
 							<node  id="ID78" name="Body1">
@@ -375,7 +375,7 @@
 						</node>
 					</node>
 					<node  id="ID81" name="shin_bracket_v7">
-						<matrix> 0 0 1 0 0 -1 0 10 1 0 0 0 0 0 0 1 </matrix>
+						<matrix> 1 0 0 0 0 -1 0 10 0 0 -1 0 0 0 0 1 </matrix>
 						<node  id="ID82" name="shin_v5">
 							<matrix> -1 -2.38804e-08 0.000113106 -0.000141403 0 1 0.000211132 9.99974 -0.000113106 0.000211132 -1 -0.000328052 0 0 0 1 </matrix>
 							<node  id="ID83" name="Body1">
@@ -406,14 +406,14 @@
 					<perspective>
 						<yfov>45</yfov>
 						<aspect_ratio>1.33333</aspect_ratio>
-						<znear>0.00387358</znear>
-						<zfar>38.7358</zfar>
+						<znear>0.00369876</znear>
+						<zfar>36.9876</zfar>
 					</perspective>
 				</technique_common>
 			</optics>
 			<extra>
 				<technique  >
-					<camera_target type="float">0.002175 0.0210247 0.0133</camera_target>
+					<camera_target type="float">-0.0210247 0.002175 0.0133</camera_target>
 				</technique>
 			</extra>
 		</camera >
@@ -1157,16 +1157,16 @@
 		</geometry>
 	</library_geometries>
 	<library_materials>
-		<material id="ID12" name="Paint_-_Metallic_(Dark_Grey)">
+		<material id="ID75" name="Paint_-_Metallic_(Red)">
 			<instance_effect url="#ID86"/>
 		</material>
 		<material id="ID16" name="Steel_-_Satin">
 			<instance_effect url="#ID87"/>
 		</material>
-		<material id="ID7" name="Paint_-_Metallic_(Black)">
+		<material id="ID12" name="Paint_-_Metallic_(Dark_Grey)">
 			<instance_effect url="#ID88"/>
 		</material>
-		<material id="ID75" name="Paint_-_Metallic_(Red)">
+		<material id="ID7" name="Paint_-_Metallic_(Black)">
 			<instance_effect url="#ID89"/>
 		</material>
 	</library_materials>
@@ -1178,7 +1178,7 @@
 						<emission><color>0 0 0 1</color></emission>
 						<ambient><color>0 0 0 1</color></ambient>
 						<diffuse>
-							<color>0.34902 0.34902 0.34902 1</color>
+							<color>0.768627 0.207843 0.152941 1</color>
 						</diffuse>
 						<specular><color>1 1 1 1</color></specular>
 						<transparent opaque="A_ONE"><color>1.0 1.0 1.0 1.0</color></transparent>
@@ -1210,7 +1210,7 @@
 						<emission><color>0 0 0 1</color></emission>
 						<ambient><color>0 0 0 1</color></ambient>
 						<diffuse>
-							<color>0.0980392 0.0980392 0.0980392 1</color>
+							<color>0.34902 0.34902 0.34902 1</color>
 						</diffuse>
 						<specular><color>1 1 1 1</color></specular>
 						<transparent opaque="A_ONE"><color>1.0 1.0 1.0 1.0</color></transparent>
@@ -1226,7 +1226,7 @@
 						<emission><color>0 0 0 1</color></emission>
 						<ambient><color>0 0 0 1</color></ambient>
 						<diffuse>
-							<color>0.768627 0.207843 0.152941 1</color>
+							<color>0.0980392 0.0980392 0.0980392 1</color>
 						</diffuse>
 						<specular><color>1 1 1 1</color></specular>
 						<transparent opaque="A_ONE"><color>1.0 1.0 1.0 1.0</color></transparent>

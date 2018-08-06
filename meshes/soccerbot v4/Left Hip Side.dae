@@ -5,8 +5,8 @@
 			<author> SimLab Soft http://www.simLab-soft.com </author>
 			<authoring_tool>SimLab Collada Exporter for Fusion 360</authoring_tool>
 		</contributor>
-		<created>2018-08-06T00:05:17</created>
-		<modified>2018-08-06T00:05:17</modified>
+		<created>2018-08-06T00:50:36</created>
+		<modified>2018-08-06T00:50:36</modified>
 		<unit meter="1.000000000000000" name="Meter"/>
 		<up_axis>Z_UP</up_axis>
 	</asset>
@@ -15,13 +15,13 @@
 			<node>
 				<matrix> 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 </matrix>
 				<node  id="ID0" name="Camera_2">
-					<matrix> 1 0 0 0 0 0 -1 -0.1945 0 1 0 0.00851534 0 0 0 1 </matrix>
+					<matrix> 1 0 0 0.0005 0 0 -1 -0.194 0 1 0 0.00851534 0 0 0 1 </matrix>
 					<instance_camera url="#ID1" />
 				</node>
 				<node  id="ID2" name="left_hip_side_v2">
 					<matrix> 0.01 0 0 0 0 0 -0.01 0 0 0.01 0 0 0 0 0 1 </matrix>
 					<node  id="ID3" name="upper_bracket_part_v14">
-						<matrix> -1 0 0 0 0 1 0 0 0 0 -1 0 0 0 0 1 </matrix>
+						<matrix> 0 0 -1 0 0 1 0 0 1 0 0 0 0 0 0 1 </matrix>
 						<node  id="ID4" name="Body3">
 							<matrix> 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 </matrix>
 							<node  id="ID5" name="Body3_Paint_-_Metallic_(Red)">
@@ -49,14 +49,14 @@
 					<perspective>
 						<yfov>45</yfov>
 						<aspect_ratio>1.33333</aspect_ratio>
-						<znear>0.0022051</znear>
-						<zfar>22.051</zfar>
+						<znear>0.00209595</znear>
+						<zfar>20.9595</zfar>
 					</perspective>
 				</technique_common>
 			</optics>
 			<extra>
 				<technique  >
-					<camera_target type="float">0 -0.0005 0.00851534</camera_target>
+					<camera_target type="float">0.0005 3.82305e-13 0.00851534</camera_target>
 				</technique>
 			</extra>
 		</camera >
