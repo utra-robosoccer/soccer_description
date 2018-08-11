@@ -39,7 +39,7 @@
         </visual>
     </link>
     <link name="camera" />
-    <link name="imu" />
+    <link name="imu_link" />
     <link name="neck">
         <inertial>
             <mass value="11.294"/>
@@ -67,7 +67,7 @@
             <inertia ixx="0.392" ixy="-0.011" ixz="-0.229" iyy="0.550" iyz="-0.011" izz="0.320"/>
         </inertial>
         <collision name="collision">
-            <origin rpy="0  0  0" xyz="0 0 0.01995"/>
+            <origin rpy="0  0  0" xyz="0.0122 0 0.01995"/>
             <geometry>
                 <box size="0.0712 0.094 0.0839"/>
             </geometry>
@@ -418,11 +418,9 @@
 
     <joint name="torso_imu" type="fixed">
         <parent link="torso"/>
-        <child link="imu"/>
-        <origin rpy="0 0 0" xyz="-0.03095 -0.0562  0.001286"/>
-        <axis xyz="0 0  0"/>
-        <dynamics damping="0.0" friction="2000.0" />
-        <limit effort="0" lower="0" upper="0" velocity="0"/>
+        <child link="imu_link"/>
+        <origin rpy="0 0 0" xyz="0.1 0 0.0075"/>
+        <axis xyz="0 0 0"/>
     </joint>
 
     <joint name="torso_right_hip_side" type="revolute">
@@ -453,9 +451,9 @@
         <parent link="right_thigh"/>
         <child link="right_calve"/>
         <origin rpy="0 0 0" xyz="0 0 -0.0929"/>
-        <axis xyz="0 1 0"/>
+        <axis xyz="0 -1 0"/>
         <dynamics damping="0.0" friction="2000.0" />
-        <limit effort="31000.0" lower="0" upper="2.793" velocity="1.0"/>
+        <limit effort="31000.0" lower="-2.793" upper="0" velocity="1.0"/>
     </joint>
     <joint name="right_calve_ankle" type="revolute">
         <parent link="right_calve"/>
@@ -502,9 +500,9 @@
         <parent link="left_thigh"/>
         <child link="left_calve"/>
         <origin rpy="0 0 0" xyz="0 0 -0.09290"/>
-        <axis xyz="0 1 0"/>
+        <axis xyz="0 -1 0"/>
         <dynamics damping="0.0" friction="2000.0" />
-        <limit effort="31000.0" lower="0" upper="2.793" velocity="1.0"/>
+        <limit effort="31000.0" lower="-2.793" upper="0" velocity="1.0"/>
     </joint>
     <joint name="left_calve_ankle" type="revolute">
         <parent link="left_calve"/>
