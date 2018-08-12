@@ -7,6 +7,7 @@
     </plugin>
   </gazebo>
 
+
   <!-- Joint to keep the robot up in midair -->
   <link name="world" />
   <joint name="world_base_link" type="fixed">
