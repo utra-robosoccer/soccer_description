@@ -71,5 +71,22 @@
         </sensor>
     </gazebo>
 
+    <!-- Friction on arms and feet -->
+    <gazebo reference="left_foot">
+        <mu1>100</mu1>
+        <mu2>50</mu2>
+    </gazebo>
+    <gazebo reference="right_foot">
+        <mu1>100</mu1>
+        <mu2>50</mu2>
+    </gazebo>
+    <gazebo reference="right_forearm">
+        <mu1>100</mu1>
+        <mu2>50</mu2>
+    </gazebo>
+    <gazebo reference="left_forearm">
+        <mu1>100</mu1>
+        <mu2>50</mu2>
+    </gazebo>
 
 </robot>

@@ -67,7 +67,7 @@
             <inertia ixx="0.392" ixy="-0.011" ixz="-0.229" iyy="0.550" iyz="-0.011" izz="0.320"/>
         </inertial>
         <collision name="collision">
-            <origin rpy="0  0  0" xyz="0.0122 0 0.01995"/>
+            <origin rpy="0  0  0" xyz="0.01735 0 0.01995"/>
             <geometry>
                 <box size="0.0712 0.094 0.0839"/>
             </geometry>
@@ -764,6 +764,6 @@
             <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
-    </transmission>
+    </transmission>/
 
 </robot>
