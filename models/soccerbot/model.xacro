@@ -22,8 +22,8 @@
     <link name="torso">
         <inertial>
             <mass value="1529.201"/>
-            <origin rpy="0 0 0" xyz="0 0 0"/>
-            <inertia ixx="5.590" ixy="0.006" ixz="0.063" iyy="8.698" iyz="-0.056" izz="3.302"/>
+            <origin rpy="0 0 0" xyz="0.0082498 -0.0017440 -0.0522479"/>
+            <inertia ixx="4.323" ixy="0.006" ixz="0.040" iyy="5.198" iyz="-0.015" izz="3.567"/>
         </inertial>
         <collision name="collision">
             <origin rpy="0 0 0" xyz="0 0 -0.052"/>
@@ -43,8 +43,8 @@
     <link name="neck">
         <inertial>
             <mass value="11.294"/>
-            <origin rpy="0  0  0" xyz="0  0  0"/>
-            <inertia ixx="0.006" ixy="0" ixz="0" iyy="0.002" iyz="0" izz="0.005"/>
+            <origin rpy="0  0  0" xyz="0 -0.0006476 0.0092453"/>
+            <inertia ixx="0.005" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.005"/>
         </inertial>
         <collision name="collision">
             <origin rpy="0  0  0" xyz="0 0 0.0165"/>
@@ -63,8 +63,8 @@
     <link name="head">
         <inertial>
             <mass value="282.919"/>
-            <origin rpy="0  0  0" xyz="0  0  0"/>
-            <inertia ixx="0.392" ixy="-0.011" ixz="-0.229" iyy="0.550" iyz="-0.011" izz="0.320"/>
+            <origin rpy="0  0  0" xyz="0.0237166 0.0018096 0.0255966"/>
+            <inertia ixx="0.206" ixy="0.001" ixz="-0.057" iyy="0.206" iyz="0.003" izz="0.160"/>
         </inertial>
         <collision name="collision">
             <origin rpy="0  0  0" xyz="0.01735 0 0.01995"/>
@@ -84,8 +84,8 @@
     <link name="right_hip_side">
         <inertial>
             <mass value="9.364"/>
-            <origin rpy="0  0  0" xyz="0  0  0"/>
-            <inertia ixx="0.004" ixy="0" ixz="0" iyy="0.007" iyz="0" izz="0.004"/>
+            <origin rpy="0  0  0" xyz="0.0003695 0.0000 0.01689"/>
+            <inertia ixx="0.002" ixy="0.000" ixz="0.000" iyy="0.005" iyz="0.000" izz="0.004"/>
         </inertial>
         <collision name="collision">
             <origin rpy="0  0  0" xyz="0 0 0.00899"/>
@@ -104,8 +104,8 @@
     <link name="right_hip_front">
         <inertial>
             <mass value="153.186"/>
-            <origin rpy="0 0 0" xyz="0 0 0"/>
-            <inertia ixx="0.060" ixy="0.000" ixz="-0.038" iyy="0.205" iyz="0.000" izz="0.173"/>
+            <origin rpy="0 0 0" xyz="-0.02093 0 -0.011313"/>
+            <inertia ixx="0.041" ixy="0.000" ixz="-0.002" iyy="0.118" iyz="0.000" izz="0.106"/>
         </inertial>
         <collision name="collision">
             <origin rpy="0 0 0" xyz="-0.02187 0 -0.01332"/>
@@ -124,8 +124,8 @@
     <link name="right_thigh">
         <inertial>
             <mass value="21.438"/>
-            <origin rpy="0 0 0" xyz="0  0  0"/>
-            <inertia ixx="0.063" ixy="0" ixz="0.002" iyy="0.063" iyz="0" izz="0.011"/>
+            <origin rpy="0 0 0" xyz="0.0019422 0.0001419 -0.0469409"/>
+            <inertia ixx="0.025" ixy="0.002" ixz="0.000" iyy="0.016" iyz="0.000" izz="0.010"/>
         </inertial>
         <collision name="collision">
             <origin rpy="0 0 0" xyz="0 0 -0.0445"/>
@@ -144,8 +144,8 @@
     <link name="right_calve">
         <inertial>
             <mass value="86.547"/>
-            <origin rpy="0  0  0" xyz="0 0 0"/>
-            <inertia ixx="0.072" ixy="0" ixz="0" iyy="0.443" iyz="0.003" izz="0.019"/>
+            <origin rpy="0  0  0" xyz="0 -0.0003259 -0.0150123"/>
+            <inertia ixx="0.054" ixy="0.000" ixz="0.000" iyy="0.046" iyz="0.001" izz="0.019"/>
         </inertial>
         <collision name="collision">
             <origin rpy="0 0 0" xyz="0 0 -0.03385"/>
@@ -164,8 +164,8 @@
     <link name="right_ankle">
         <inertial>
             <mass value="153.186"/>
-            <origin rpy="0 0 0" xyz="0  0  0"/>
-            <inertia ixx="0.038" ixy="0" ixz="0" iyy="0.060" iyz="0.038" izz="0.173"/>
+            <origin rpy="0 0 0" xyz="-0.020939 0.000 0.011313"/>
+            <inertia ixx="0.041" ixy="0.000" ixz="0.002" iyy="0.118" iyz="0.000" izz="0.106"/>
         </inertial>
         <collision name="collision">
             <origin rpy="0 0 0" xyz="-0.02014 0 0.01031"/>
@@ -184,8 +184,8 @@
     <link name="right_foot">
         <inertial>
             <mass value="23.216"/>
-            <origin rpy="0 0 0" xyz="0  0  0"/>
-            <inertia ixx="0.013" ixy="0" ixz="0.001" iyy="0.025" iyz="0.002" izz="0.022"/>
+            <origin rpy="0 0 0" xyz="-0.020939 0.0 0.011313"/>
+            <inertia ixx="0.006" ixy="0.000" ixz="0.000" iyy="0.018" iyz="0.000" izz="0.022"/>
         </inertial>
         <collision name="collision">
             <origin rpy="0 0 0" xyz="0.00385 -0.00401 -0.00737"/>
@@ -206,8 +206,8 @@
     <link name="left_hip_side">
         <inertial>
             <mass value="9.364"/>
-            <origin rpy="0  0  0" xyz="0  0  0"/>
-            <inertia ixx="0.004" ixy="0" ixz="0" iyy="0.007" iyz="0" izz="0.004"/>
+            <origin rpy="0  0  0" xyz="0.0003695 0.0000 0.01689"/>
+            <inertia ixx="0.002" ixy="0.000" ixz="0.000" iyy="0.005" iyz="0.000" izz="0.004"/>
         </inertial>
         <collision name="collision">
             <origin rpy="0  0  0" xyz="0 0 0.00899"/>
@@ -226,8 +226,8 @@
     <link name="left_hip_front">
         <inertial>
             <mass value="153.186"/>
-            <origin rpy="0 0 0" xyz="0 0 0"/>
-            <inertia ixx="0.060" ixy="0.000" ixz="-0.038" iyy="0.205" iyz="0.000" izz="0.173"/>
+            <origin rpy="0 0 0" xyz="-0.02093 0 -0.011313"/>
+            <inertia ixx="0.041" ixy="0.000" ixz="-0.002" iyy="0.118" iyz="0.000" izz="0.106"/>
         </inertial>
         <collision name="collision">
             <origin rpy="0 0 0" xyz="-0.02187 0 -0.01332"/>
@@ -246,8 +246,8 @@
     <link name="left_thigh">
         <inertial>
             <mass value="21.438"/>
-            <origin rpy="0 0 0" xyz="0  0  0"/>
-            <inertia ixx="0.063" ixy="0" ixz="0.002" iyy="0.063" iyz="0" izz="0.011"/>
+            <origin rpy="0 0 0" xyz="0.0019422 -0.0001419 -0.0469409"/>
+            <inertia ixx="0.025" ixy="-0.002" ixz="0.000" iyy="0.016" iyz="0.000" izz="0.010"/>
         </inertial>
         <collision name="collision">
             <origin rpy="0 0 0" xyz="0 0 -0.0445"/>
@@ -266,8 +266,8 @@
     <link name="left_calve">
         <inertial>
             <mass value="86.547"/>
-            <origin rpy="0  0  0" xyz="0 0 0"/>
-            <inertia ixx="0.072" ixy="0" ixz="0" iyy="0.443" iyz="-0.003" izz="0.019"/>
+            <origin rpy="0  0  0" xyz="0 0.0003259 -0.0150123"/>
+            <inertia ixx="0.054" ixy="0.000" ixz="0.000" iyy="0.046" iyz="-0.001" izz="0.019"/>
         </inertial>
         <collision name="collision">
             <origin rpy="0 0 0" xyz="0 0 -0.03385"/>
@@ -286,8 +286,8 @@
     <link name="left_ankle">
         <inertial>
             <mass value="153.186"/>
-            <origin rpy="0 0 0" xyz="0  0  0"/>
-            <inertia ixx="0.038" ixy="0" ixz="0" iyy="0.060" iyz="-0.038" izz="0.173"/>
+            <origin rpy="0 0 0" xyz="-0.020939 0.000 0.011313"/>
+            <inertia ixx="0.041" ixy="0.000" ixz="0.002" iyy="0.118" iyz="0.000" izz="0.106"/>
         </inertial>
         <collision name="collision">
             <origin rpy="0 0 0" xyz="-0.02014 0 0.01031"/>
@@ -306,8 +306,8 @@
     <link name="left_foot">
         <inertial>
             <mass value="23.216"/>
-            <origin rpy="0 0 0" xyz="0  0  0"/>
-            <inertia ixx="0.013" ixy="0" ixz="0.001" iyy="0.025" iyz="-0.002" izz="0.022"/>
+            <origin rpy="0 0 0" xyz="-0.020939 0.0 0.011313"/>
+            <inertia ixx="0.006" ixy="0.000" ixz="0.000" iyy="0.018" iyz="0.000" izz="0.022"/>
         </inertial>
         <collision name="collision">
             <origin rpy="0 0 0" xyz="0.00385 0.00401 -0.00737 "/>
@@ -326,52 +326,11 @@
         </visual>
     </link>
 
-    <link name="left_bicep">
-        <inertial>
-            <mass value="213.5130"/>
-            <origin rpy="0  0  0" xyz="0  0  0"/>
-            <inertia ixx="0.949" ixy="0.000" ixz="0.000" iyy="0.799" iyz="0.285" izz="0.166"/>
-        </inertial>
-        <collision name="collision">
-            <origin rpy="0  0  0" xyz="0 -0.0225 -0.05001"/>
-            <geometry>
-                <box size="0.04 0.047 0.123"/>
-            </geometry>
-        </collision>
-        <visual name="visual">
-            <origin rpy="0  0  0" xyz="0  0  0"/>
-            <geometry>
-                <mesh filename="package://soccer_description/meshes/soccerbot v4/Left Bicep.dae" scale="1 1 1"/>
-            </geometry>
-            <material name="black" />
-        </visual>
-    </link>
-    <link name="left_forearm">
-        <inertial>
-            <mass value="45.7"/>
-            <origin rpy="0  0  0" xyz="0  0  0"/>
-            <inertia ixx="0.276" ixy="0.017" ixz="-0.040" iyy="0.255" iyz="0.061" izz="0.051"/>
-        </inertial>
-        <collision name="collision">
-            <origin rpy="0  0  0" xyz="-0.0055 -0.01750 -0.06001"/>
-            <geometry>
-                <box size="0.035 0.049 0.144"/>
-            </geometry>
-        </collision>
-        <visual name="visual">
-            <origin rpy="0  0  0" xyz="0  0  0"/>
-            <geometry>
-                <mesh filename="package://soccer_description/meshes/soccerbot v4/Left Forearm.dae" scale="1 1 1"/>
-            </geometry>
-            <material name="black" />
-        </visual>
-    </link>
-
     <link name="right_bicep">
         <inertial>
             <mass value="213.5130"/>
-            <origin rpy="0  0  0" xyz="0  0  0"/>
-            <inertia ixx="0.949" ixy="0.000" ixz="0.000" iyy="0.799" iyz="-0.285" izz="0.166"/>
+            <origin rpy="0  0  0" xyz="0.000 0.02579 -0.04955"/>
+            <inertia ixx="0.282" ixy="0.000" ixz="0.000" iyy="0.274" iyz="0.012" izz="0.024" />
         </inertial>
         <collision name="collision">
             <origin rpy="0  0  0" xyz="0 0.0225 -0.05001"/>
@@ -390,8 +349,8 @@
     <link name="right_forearm">
         <inertial>
             <mass value="45.7"/>
-            <origin rpy="0  0  0" xyz="0  0  0"/>
-            <inertia ixx="0.276" ixy="-0.017" ixz="-0.040" iyy="0.255" iyz="-0.061" izz="0.051"/>
+            <origin rpy="0  0  0" xyz="0 0.0245 -0.0546097" />
+            <inertia ixx="0.113" ixy="0.000" ixz="0.001" iyy="0.107" iyz="0.000" izz="0.012" />
         </inertial>
         <collision name="collision">
             <origin rpy="0  0  0" xyz="-0.0055 0.01750 -0.0600"/>
@@ -403,6 +362,47 @@
             <origin rpy="0  0  0" xyz="0  0  0"/>
             <geometry>
                 <mesh filename="package://soccer_description/meshes/soccerbot v4/Right Forearm.dae" scale="1 1 1"/>
+            </geometry>
+            <material name="black" />
+        </visual>
+    </link>
+
+    <link name="left_bicep">
+        <inertial>
+            <mass value="213.5130"/>
+            <origin rpy="0  0  0" xyz="0.000 -0.02579 -0.04955"/>
+            <inertia ixx="0.282" ixy="0.000" ixz="0.000" iyy="0.274" iyz="-0.012" izz="0.024" />
+        </inertial>
+        <collision name="collision">
+            <origin rpy="0  0  0" xyz="0 -0.0225 -0.05001"/>
+            <geometry>
+                <box size="0.04 0.047 0.123"/>
+            </geometry>
+        </collision>
+        <visual name="visual">
+            <origin rpy="0  0  0" xyz="0  0  0"/>
+            <geometry>
+                <mesh filename="package://soccer_description/meshes/soccerbot v4/Left Bicep.dae" scale="1 1 1"/>
+            </geometry>
+            <material name="black" />
+        </visual>
+    </link>
+    <link name="left_forearm">
+        <inertial>
+            <mass value="45.7"/>
+            <origin rpy="0  0  0" xyz="0 -0.0245 -0.0546097" />
+            <inertia ixx="0.113" ixy="0.000" ixz="-0.001" iyy="0.107" iyz="0.000" izz="0.012" />
+        </inertial>
+        <collision name="collision">
+            <origin rpy="0  0  0" xyz="-0.0055 -0.01750 -0.06001"/>
+            <geometry>
+                <box size="0.035 0.049 0.144"/>
+            </geometry>
+        </collision>
+        <visual name="visual">
+            <origin rpy="0  0  0" xyz="0  0  0"/>
+            <geometry>
+                <mesh filename="package://soccer_description/meshes/soccerbot v4/Left Forearm.dae" scale="1 1 1"/>
             </geometry>
             <material name="black" />
         </visual>
