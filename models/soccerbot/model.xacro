@@ -426,7 +426,7 @@
         <parent link="right_hip_side"/>
         <child link="right_hip_front"/>
         <origin rpy="0 0 0" xyz="0 0 0"/>
-        <axis xyz="1 0 0"/>
+        <axis xyz="-1 0 0"/>
         <dynamics damping="0.0" friction="2000.0" />
         <limit effort="31000.0" lower="-0.785" upper="1.571" velocity="1.0"/>
     </joint>
@@ -458,7 +458,7 @@
         <parent link="right_ankle"/>
         <child link="right_foot"/>
         <origin rpy="0 0 0" xyz="0 0 0"/>
-        <axis xyz="1 0 0"/>
+        <axis xyz="-1 0 0"/>
         <dynamics damping="0.0" friction="2000.0" />
         <limit effort="31000.0" lower="-0.785" upper="0.785" velocity="1.0"/>
     </joint>
@@ -475,7 +475,7 @@
         <parent link="left_hip_side"/>
         <child link="left_hip_front"/>
         <origin rpy="0 0 0" xyz="0 0 0"/>
-        <axis xyz="1 0 0"/>
+        <axis xyz="-1 0 0"/>
         <dynamics damping="0.0" friction="2000.0" />
         <limit effort="31000.0" lower="-1.571" upper="0.785" velocity="1.0"/>
     </joint>
@@ -507,7 +507,7 @@
         <parent link="left_ankle"/>
         <child link="left_foot"/>
         <origin rpy="0 0 0" xyz="0 0 0"/>
-        <axis xyz="1 0 0"/>
+        <axis xyz="-1 0 0"/>
         <dynamics damping="0.0" friction="2000.0" />
         <limit effort="31000.0" lower="-0.785" upper="0.785" velocity="1.0"/>
     </joint>
