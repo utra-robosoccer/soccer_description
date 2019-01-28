@@ -4,7 +4,7 @@
     <!-- Ros Control Plugin -->
     <gazebo>
         <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
-            <robotNamespace>/soccerbot</robotNamespace>
+            <robotNamespace>/</robotNamespace>
             <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
         </plugin>
     </gazebo>
@@ -35,7 +35,7 @@
             <plugin name='camera_controller' filename='libgazebo_ros_camera.so'>
                 <alwaysOn>true</alwaysOn>
                 <updateRate>0.0</updateRate>
-                <cameraName>soccerbot/camera</cameraName>
+                <cameraName>camera</cameraName>
                 <imageTopicName>image_raw</imageTopicName>
                 <cameraInfoTopicName>camera_info</cameraInfoTopicName>
                 <frameName>camera_link</frameName>
@@ -59,7 +59,7 @@
             <visualize>true</visualize>
             <topic>__default_topic__</topic>
             <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
-                <topicName>soccerbot/imu</topicName>
+                <topicName>imu</topicName>
                 <bodyName>imu_link</bodyName>
                 <updateRateHZ>50.0</updateRateHZ>
                 <gaussianNoise>0.0</gaussianNoise>
