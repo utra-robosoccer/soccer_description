@@ -25,7 +25,7 @@
         <visual name="visual">
             <origin rpy="0 0 0" xyz="0 0 0"/>
             <geometry>
-                <mesh filename="package://soccer_description/meshes/soccerbot v4/Torso.dae" scale="1 1 1"/>
+                <mesh filename="package://soccer_description/meshes/Torso.dae" scale="1 1 1"/>
             </geometry>
         </visual>
     </link>
@@ -46,7 +46,7 @@
         <visual name="visual">
             <origin rpy="0  0  0" xyz="0  0  0"/>
             <geometry>
-                <mesh filename="package://soccer_description/meshes/soccerbot v4/Neck.dae" scale="1 1 1"/>
+                <mesh filename="package://soccer_description/meshes/Neck.dae" scale="1 1 1"/>
             </geometry>
             <material name="black" />
         </visual>
@@ -66,7 +66,7 @@
         <visual name="visual">
             <origin rpy="0  0  0" xyz="0  0  0"/>
             <geometry>
-                <mesh filename="package://soccer_description/meshes/soccerbot v4/Head.dae" scale="1 1 1"/>
+                <mesh filename="package://soccer_description/meshes/Head.dae" scale="1 1 1"/>
             </geometry>
             <material name="black" />
         </visual>
@@ -87,7 +87,7 @@
         <visual name="visual">
             <origin rpy="0  0  0" xyz="0  0  0"/>
             <geometry>
-                <mesh filename="package://soccer_description/meshes/soccerbot v4/Right Hip Side.dae" scale="1 1 1"/>
+                <mesh filename="package://soccer_description/meshes/Right Hip Side.dae" scale="1 1 1"/>
             </geometry>
             <material name="black" />
         </visual>
@@ -107,7 +107,7 @@
         <visual name="visual">
             <origin rpy="0  0  0" xyz="0  0  0"/>
             <geometry>
-                <mesh filename="package://soccer_description/meshes/soccerbot v4/Right Hip Front.dae" scale="1 1 1"/>
+                <mesh filename="package://soccer_description/meshes/Right Hip Front.dae" scale="1 1 1"/>
             </geometry>
             <material name="black" />
         </visual>
@@ -127,7 +127,7 @@
         <visual name="visual">
             <origin rpy="0  0  0" xyz="0  0  0"/>
             <geometry>
-                <mesh filename="package://soccer_description/meshes/soccerbot v4/Right Thigh.dae" scale="1 1 1"/>
+                <mesh filename="package://soccer_description/meshes/Right Thigh.dae" scale="1 1 1"/>
             </geometry>
             <material name="black" />
         </visual>
@@ -147,7 +147,7 @@
         <visual name="visual">
             <origin rpy="0 0 0" xyz="0 0 -0.0827"/>
             <geometry>
-                <mesh filename="package://soccer_description/meshes/soccerbot v4/Right Calve.dae" scale="1 1 1"/>
+                <mesh filename="package://soccer_description/meshes/Right Calve.dae" scale="1 1 1"/>
             </geometry>
             <material name="black" />
         </visual>
@@ -167,7 +167,7 @@
         <visual name="visual">
             <origin rpy="0  0  0" xyz="0  0  0"/>
             <geometry>
-                <mesh filename="package://soccer_description/meshes/soccerbot v4/Right Ankle.dae" scale="1 1 1"/>
+                <mesh filename="package://soccer_description/meshes/Right Ankle.dae" scale="1 1 1"/>
             </geometry>
             <material name="black" />
         </visual>
@@ -188,7 +188,7 @@
         <visual name="visual">
             <origin rpy="0  0  0" xyz="0  0  0"/>
             <geometry>
-                <mesh filename="package://soccer_description/meshes/soccerbot v4/Right Foot.dae" scale="1 1 1"/>
+                <mesh filename="package://soccer_description/meshes/Right Foot.dae" scale="1 1 1"/>
             </geometry>
             <material name="black" />
         </visual>
@@ -209,7 +209,7 @@
         <visual name="visual">
             <origin rpy="0  0  0" xyz="0  0  0"/>
             <geometry>
-                <mesh filename="package://soccer_description/meshes/soccerbot v4/Left Hip Side.dae" scale="1 1 1"/>
+                <mesh filename="package://soccer_description/meshes/Left Hip Side.dae" scale="1 1 1"/>
             </geometry>
             <material name="black" />
         </visual>
@@ -229,7 +229,7 @@
         <visual name="visual">
             <origin rpy="0  0  0" xyz="0  0  0"/>
             <geometry>
-                <mesh filename="package://soccer_description/meshes/soccerbot v4/Left Hip Front.dae" scale="1 1 1"/>
+                <mesh filename="package://soccer_description/meshes/Left Hip Front.dae" scale="1 1 1"/>
             </geometry>
             <material name="black" />
         </visual>
@@ -249,7 +249,7 @@
         <visual name="visual">
             <origin rpy="0  0  0" xyz="0  0  0"/>
             <geometry>
-                <mesh filename="package://soccer_description/meshes/soccerbot v4/Left Thigh.dae" scale="1 1 1"/>
+                <mesh filename="package://soccer_description/meshes/Left Thigh.dae" scale="1 1 1"/>
             </geometry>
             <material name="black" />
         </visual>
@@ -269,7 +269,7 @@
         <visual name="visual">
             <origin rpy="0 0 0" xyz="0 0 -0.0827"/>
             <geometry>
-                <mesh filename="package://soccer_description/meshes/soccerbot v4/Left Calve.dae" scale="1 1 1"/>
+                <mesh filename="package://soccer_description/meshes/Left Calve.dae" scale="1 1 1"/>
             </geometry>
             <material name="black" />
         </visual>
@@ -289,7 +289,7 @@
         <visual name="visual">
             <origin rpy="0 0 0" xyz="0  0  0"/>
             <geometry>
-                <mesh filename="package://soccer_description/meshes/soccerbot v4/Left Ankle.dae" scale="1 1 1"/>
+                <mesh filename="package://soccer_description/meshes/Left Ankle.dae" scale="1 1 1"/>
             </geometry>
             <material name="black" />
         </visual>
@@ -311,7 +311,7 @@
         <visual name="visual">
             <origin rpy="0  0  0" xyz="0  0  0"/>
             <geometry>
-                <mesh filename="package://soccer_description/meshes/soccerbot v4/Left Foot.dae" scale="1 1 1"/>
+                <mesh filename="package://soccer_description/meshes/Left Foot.dae" scale="1 1 1"/>
             </geometry>
             <material name="black" />
         </visual>
@@ -332,7 +332,7 @@
         <visual name="visual">
             <origin rpy="0  0  0" xyz="0  0  0"/>
             <geometry>
-                <mesh filename="package://soccer_description/meshes/soccerbot v4/Right Bicep.dae" scale="1 1 1"/>
+                <mesh filename="package://soccer_description/meshes/Right Bicep.dae" scale="1 1 1"/>
             </geometry>
             <material name="black" />
         </visual>
@@ -352,7 +352,7 @@
         <visual name="visual">
             <origin rpy="0  0  0" xyz="0  0  0"/>
             <geometry>
-                <mesh filename="package://soccer_description/meshes/soccerbot v4/Right Forearm.dae" scale="1 1 1"/>
+                <mesh filename="package://soccer_description/meshes/Right Forearm.dae" scale="1 1 1"/>
             </geometry>
             <material name="black" />
         </visual>
@@ -373,7 +373,7 @@
         <visual name="visual">
             <origin rpy="0  0  0" xyz="0  0  0"/>
             <geometry>
-                <mesh filename="package://soccer_description/meshes/soccerbot v4/Left Bicep.dae" scale="1 1 1"/>
+                <mesh filename="package://soccer_description/meshes/Left Bicep.dae" scale="1 1 1"/>
             </geometry>
             <material name="black" />
         </visual>
@@ -393,7 +393,7 @@
         <visual name="visual">
             <origin rpy="0  0  0" xyz="0  0  0"/>
             <geometry>
-                <mesh filename="package://soccer_description/meshes/soccerbot v4/Left Forearm.dae" scale="1 1 1"/>
+                <mesh filename="package://soccer_description/meshes/Left Forearm.dae" scale="1 1 1"/>
             </geometry>
             <material name="black" />
         </visual>
