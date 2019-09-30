@@ -1,0 +1,225 @@
+<?xml version="1.0" ?>
+<robot>
+
+    <!-- Ros Control Plugin -->
+    <gazebo>
+        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+            <robotNamespace>/</robotNamespace>
+            <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+        </plugin>
+    </gazebo>
+
+    <!-- Camera Sensor -->
+    <gazebo reference="camera">
+        <sensor name='main_camera' type='camera'>
+            <update_rate>30</update_rate>
+            <camera name='__default__'>
+                <horizontal_fov>1.39626</horizontal_fov>
+                <image>
+                    <width>640</width>
+                    <height>480</height>
+                    <format>R8G8B8</format>
+                </image>
+                <clip>
+                    <near>0.2</near>
+                    <far>10</far>
+                </clip>
+                <noise>
+                    <type>gaussian</type>
+                    <mean>0</mean>
+                    <stddev>0.007</stddev>
+                </noise>
+            </camera>
+            <always_on>1</always_on>
+            <visualize>1</visualize>
+            <plugin name='camera_controller' filename='libgazebo_ros_camera.so'>
+                <alwaysOn>true</alwaysOn>
+                <updateRate>0.0</updateRate>
+                <cameraName>camera</cameraName>
+                <imageTopicName>image_raw</imageTopicName>
+                <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+                <frameName>camera_link</frameName>
+                <hackBaseline>0.07</hackBaseline>
+                <distortionK1>0.0</distortionK1>
+                <distortionK2>0.0</distortionK2>
+                <distortionK3>0.0</distortionK3>
+                <distortionT1>0.0</distortionT1>
+                <distortionT2>0.0</distortionT2>
+            </plugin>
+        </sensor>
+    </gazebo>
+
+
+    <!-- IMU Sensor -->
+    <gazebo reference="imu_link">
+        <gravity>true</gravity>
+        <sensor name="imu_sensor" type="imu">
+            <always_on>true</always_on>
+            <update_rate>100</update_rate>
+            <visualize>true</visualize>
+            <topic>__default_topic__</topic>
+            <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+                <topicName>imu</topicName>
+                <bodyName>imu_link</bodyName>
+                <updateRateHZ>50.0</updateRateHZ>
+                <gaussianNoise>0.0</gaussianNoise>
+                <xyzOffset>0 0 0</xyzOffset>
+                <rpyOffset>0 0 0</rpyOffset>
+                <frameName>imu_link</frameName>
+            </plugin>
+            <pose>0 0 0 0 0 0</pose>
+        </sensor>
+    </gazebo>
+
+    <!-- Friction on arms and feet -->
+    <gazebo reference="left_foot">
+        <mu1>1000</mu1>
+        <mu2>500</mu2>
+    </gazebo>
+    <gazebo reference="right_foot">
+        <mu1>1000</mu1>
+        <mu2>500</mu2>
+    </gazebo>
+    <gazebo reference="right_forearm">
+        <mu1>1000</mu1>
+        <mu2>500</mu2>
+    </gazebo>
+    <gazebo reference="left_forearm">
+        <mu1>1000</mu1>
+        <mu2>500</mu2>
+    </gazebo>
+
+    <gazebo reference="base_link">
+        <kp>1000000.0</kp>
+        <kd>1.0</kd>
+        <mu1>0.8</mu1>
+        <mu2>0.8</mu2>
+    </gazebo>
+    <gazebo reference="torso">
+        <kp>1000000.0</kp>
+        <kd>1.0</kd>
+        <mu1>0.8</mu1>
+        <mu2>0.8</mu2>
+    </gazebo>
+    <gazebo reference="camera">
+        <kp>1000000.0</kp>
+        <kd>1.0</kd>
+        <mu1>0.8</mu1>
+        <mu2>0.8</mu2>
+    </gazebo>
+    <gazebo reference="imu_link">
+        <kp>1000000.0</kp>
+        <kd>1.0</kd>
+        <mu1>0.8</mu1>
+        <mu2>0.8</mu2>
+    </gazebo>
+    <gazebo reference="neck">
+        <kp>1000000.0</kp>
+        <kd>1.0</kd>
+        <mu1>0.8</mu1>
+        <mu2>0.8</mu2>
+    </gazebo>
+    <gazebo reference="head">
+        <kp>1000000.0</kp>
+        <kd>1.0</kd>
+        <mu1>0.8</mu1>
+        <mu2>0.8</mu2>
+    </gazebo>
+    <gazebo reference="right_hip_side">
+        <kp>1000000.0</kp>
+        <kd>1.0</kd>
+        <mu1>0.8</mu1>
+        <mu2>0.8</mu2>
+    </gazebo>
+    <gazebo reference="right_hip_front">
+        <kp>1000000.0</kp>
+        <kd>1.0</kd>
+        <mu1>0.8</mu1>
+        <mu2>0.8</mu2>
+    </gazebo>
+    <gazebo reference="right_thigh">
+        <kp>1000000.0</kp>
+        <kd>1.0</kd>
+        <mu1>0.8</mu1>
+        <mu2>0.8</mu2>
+    </gazebo>
+    <gazebo reference="right_calve">
+        <kp>1000000.0</kp>
+        <kd>1.0</kd>
+        <mu1>0.8</mu1>
+        <mu2>0.8</mu2>
+    </gazebo>
+    <gazebo reference="right_ankle">
+        <kp>1000000.0</kp>
+        <kd>1.0</kd>
+        <mu1>0.8</mu1>
+        <mu2>0.8</mu2>
+    </gazebo>
+    <gazebo reference="right_foot">
+        <kp>1000000.0</kp>
+        <kd>1.0</kd>
+        <mu1>0.8</mu1>
+        <mu2>0.8</mu2>
+    </gazebo>
+    <gazebo reference="left_hip_side">
+        <kp>1000000.0</kp>
+        <kd>1.0</kd>
+        <mu1>0.8</mu1>
+        <mu2>0.8</mu2>
+    </gazebo>
+    <gazebo reference="left_hip_front">
+        <kp>1000000.0</kp>
+        <kd>1.0</kd>
+        <mu1>0.8</mu1>
+        <mu2>0.8</mu2>
+    </gazebo>
+    <gazebo reference="left_thigh">
+        <kp>1000000.0</kp>
+        <kd>1.0</kd>
+        <mu1>0.8</mu1>
+        <mu2>0.8</mu2>
+    </gazebo>
+    <gazebo reference="left_calve">
+        <kp>1000000.0</kp>
+        <kd>1.0</kd>
+        <mu1>0.8</mu1>
+        <mu2>0.8</mu2>
+    </gazebo>
+    <gazebo reference="left_ankle">
+        <kp>1000000.0</kp>
+        <kd>1.0</kd>
+        <mu1>0.8</mu1>
+        <mu2>0.8</mu2>
+    </gazebo>
+    <gazebo reference="left_foot">
+        <kp>1000000.0</kp>
+        <kd>1.0</kd>
+        <mu1>0.8</mu1>
+        <mu2>0.8</mu2>
+    </gazebo>
+    <gazebo reference="right_bicep">
+        <kp>1000000.0</kp>
+        <kd>1.0</kd>
+        <mu1>0.8</mu1>
+        <mu2>0.8</mu2>
+    </gazebo>
+    <gazebo reference="right_forearm">
+        <kp>1000000.0</kp>
+        <kd>1.0</kd>
+        <mu1>0.8</mu1>
+        <mu2>0.8</mu2>
+    </gazebo>
+    <gazebo reference="left_bicep">
+        <kp>1000000.0</kp>
+        <kd>1.0</kd>
+        <mu1>0.8</mu1>
+        <mu2>0.8</mu2>
+    </gazebo>
+    <gazebo reference="left_forearm">
+        <kp>1000000.0</kp>
+        <kd>1.0</kd>
+        <mu1>0.8</mu1>
+        <mu2>0.8</mu2>
+    </gazebo>
+
+</robot>

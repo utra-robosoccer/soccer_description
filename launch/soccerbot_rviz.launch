@@ -1,15 +1,12 @@
 <launch>
-  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find soccer_description)/models/soccerbot/model.xacro'" />
 
-  <!-- send fake joint values -->
-  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
-    <param name="use_gui" value="TRUE"/>
-  </node>
+    <param name="robot_description" command="xacro --inorder '$(find soccer_description)/models/soccerbot.xacro'" />
+    <arg name="gui" default="true" />
+    <arg name="rvizconfig" default="$(find soccer_description)/rviz/soccerbot.rviz" />
 
-  <!-- Combine joint values -->
-  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher"/>
+    <param name="use_gui" value="$(arg gui)"/>
 
-  <!-- Show in Rviz   -->
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find soccer_description)/launch/soccerbot.rviz"/>
-
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
 </launch>
