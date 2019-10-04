@@ -10,6 +10,10 @@
   <buildtool_depend>catkin</buildtool_depend>
   <depend>urdf</depend>
   <depend>xacro</depend>
+  <depend>gazebo_ros</depend>
+  <depend>gazebo_ros_control</depend>
+  <depend>dynamic_reconfigure</depend>
+  <depend>ros_control</depend>
 
   <export>
     <gazebo_ros gazebo_model_path="${prefix}/models" gazebo_media_path="${prefix}/models" />
