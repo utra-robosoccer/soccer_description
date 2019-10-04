@@ -50,17 +50,22 @@
                 <child link="${name}_bicep"/>
                 <origin rpy="0 0 0" xyz="-0.0157 ${direction * 0.0725} 0"/>
                 <axis xyz="0 -1 0"/>
-                <dynamics damping="0.0" friction="2000.0" />
-                <limit effort="15000.0" lower="-1.571" upper="3.927" velocity="1.0"/>
+                <dynamics damping="${JOINT_DAMPING}" friction="${JOINT_FRICTION}" />
+                <limit effort="${AX12_TORQUE}" lower="-${PI/2}" upper="${PI*5/4}" velocity="${AX12_VELOCITY}"/>
             </joint>
             <joint name="${name}_bicep_forearm" type="revolute">
                 <parent link="${name}_bicep"/>
                 <child link="${name}_forearm"/>
                 <origin rpy="0 0 0" xyz="0 0 -0.10"/>
                 <axis xyz="0 -1 0"/>
-                <dynamics damping="0.0" friction="2000.0" />
-                <limit effort="15000.0" lower="0" upper="3.14159" velocity="1.0"/>
+                <dynamics damping="${JOINT_DAMPING}" friction="${JOINT_FRICTION}" />
+                <limit effort="${AX12_TORQUE}" lower="0" upper="${PI}" velocity="${AX12_VELOCITY}"/>
             </joint>
+
+            <gazebo reference="${name}_forearm">
+                <mu1>${FOREARM_MU1}</mu1>
+                <mu2>${FOREARM_MU2}</mu2>
+            </gazebo>
 
             <transmission name="${origin}_${name}_bicep">
                 <type>transmission_interface/SimpleTransmission</type>
@@ -82,5 +87,18 @@
                     <mechanicalReduction>1</mechanicalReduction>
                 </actuator>
             </transmission>
+
+            <gazebo reference="${name}_bicep">
+                <kp>${JOINT_KP}</kp>
+                <kd>${JOINT_KD}</kd>
+                <mu1>${JOINT_MU1}</mu1>
+                <mu2>${JOINT_MU2}</mu2>
+            </gazebo>
+            <gazebo reference="${name}_forearm">
+                <kp>${JOINT_KP}</kp>
+                <kd>${JOINT_KD}</kd>
+                <mu1>${JOINT_MU1}</mu1>
+                <mu2>${JOINT_MU2}</mu2>
+            </gazebo>
         </xacro:macro>
     </robot>

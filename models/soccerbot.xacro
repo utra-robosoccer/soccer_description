@@ -2,25 +2,23 @@
 
 <robot name="soccerbot" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-    <xacro:property name="PI" value="3.1415926535897931"/>
+    <xacro:include filename="$(find soccer_description)/models/parameters.xacro" />
 
     <xacro:include filename="$(find soccer_description)/models/arm.xacro" />
     <xacro:include filename="$(find soccer_description)/models/leg.xacro" />
+    <xacro:include filename="$(find soccer_description)/models/head.xacro" />
+    <xacro:include filename="front_camera.xacro" />
+    <xacro:include filename="$(find soccer_description)/models/imu.xacro" />
 
-
-    <arm name="right" origin="torso" direction="1" />
-    <arm name="left" origin="torso" direction="-1" />
-    <leg name="right" origin="torso" direction="1" />
-    <leg name="left" origin="torso" direction="-1" />
-
-
-    <!-- Links -->
     <link name="base_link" />
+
     <link name="torso">
         <inertial>
             <mass value="1529.201"/>
             <origin rpy="0 0 0" xyz="0.0082498 -0.0017440 -0.0522479"/>
-            <inertia ixx="4.323" ixy="0.006" ixz="0.040" iyy="5.198" iyz="-0.015" izz="3.567"/>
+            <inertia ixx="4.323" ixy="0.006" ixz="0.040"
+                     iyy="5.198" iyz="-0.015"
+                     izz="3.567"/>
         </inertial>
         <collision name="collision">
             <origin rpy="0 0 0" xyz="0 0 -0.052"/>
@@ -35,48 +33,6 @@
             </geometry>
         </visual>
     </link>
-    <link name="camera" />
-    <link name="imu_link" />
-    <link name="neck">
-        <inertial>
-            <mass value="11.294"/>
-            <origin rpy="0  0  0" xyz="0 -0.0006476 0.0092453"/>
-            <inertia ixx="0.005" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.005"/>
-        </inertial>
-        <collision name="collision">
-            <origin rpy="0  0  0" xyz="0 0 0.0165"/>
-            <geometry>
-                <box size="0.022 0.0523 0.033"/>
-            </geometry>
-        </collision>
-        <visual name="visual">
-            <origin rpy="0  0  0" xyz="0  0  0"/>
-            <geometry>
-                <mesh filename="package://soccer_description/meshes/neck.dae" scale="1 1 1"/>
-            </geometry>
-            <material name="black" />
-        </visual>
-    </link>
-    <link name="head">
-        <inertial>
-            <mass value="282.919"/>
-            <origin rpy="0  0  0" xyz="0.0237166 0.0018096 0.0255966"/>
-            <inertia ixx="0.206" ixy="0.001" ixz="-0.057" iyy="0.206" iyz="0.003" izz="0.160"/>
-        </inertial>
-        <collision name="collision">
-            <origin rpy="0  0  0" xyz="0.01735 0 0.01995"/>
-            <geometry>
-                <box size="0.0712 0.094 0.0839"/>
-            </geometry>
-        </collision>
-        <visual name="visual">
-            <origin rpy="0  0  0" xyz="0  0  0"/>
-            <geometry>
-                <mesh filename="package://soccer_description/meshes/head.dae" scale="1 1 1"/>
-            </geometry>
-            <material name="black" />
-        </visual>
-    </link>
 
     <!-- Joints -->
     <joint name="base_link_torso" type="fixed">
@@ -86,60 +42,32 @@
         <axis xyz="1 0 0"/>
     </joint>
 
-    <joint name="torso_imu" type="fixed">
-        <parent link="torso"/>
-        <child link="imu_link"/>
-        <origin rpy="0 0 0" xyz="0.1 0 0.0075"/>
-        <axis xyz="0 0 0"/>
-    </joint>
+    <arm name="right" origin="torso" direction="1" />
+    <arm name="left" origin="torso" direction="-1" />
+    <leg name="right" origin="torso" direction="1" />
+    <leg name="left" origin="torso" direction="-1" />
+    <head origin="torso" />
+    <imu origin="torso" />
+    <front_camera origin="head" />
 
-    <joint name="torso_neck" type="revolute">
-        <parent link="torso"/>
-        <child link="neck"/>
-        <origin rpy="0 0 0" xyz="0.024 0 0.05875"/>
-        <axis xyz="0 0 1"/>
-        <dynamics damping="0.0" friction="2000.0" />
-        <limit effort="15000.0" lower="-1.571" upper="1.571" velocity="1.0"/>
-    </joint>
-    <joint name="neck_head" type="revolute">
-        <parent link="neck"/>
-        <child link="head"/>
-        <origin rpy="0 0 0" xyz="0 0 0.024"/>
-        <axis xyz="0 1 0"/>
-        <dynamics damping="0.0" friction="2000.0" />
-        <limit effort="15000.0" lower="-2.356" upper="2.356" velocity="1.0"/>
-    </joint>
-    <joint name="head_camera" type="fixed">
-        <parent link="head"/>
-        <child link="camera"/>
-        <origin rpy="0 0 0" xyz="0.05295 0.00145 0.04740"/>
-        <axis xyz="0  0  0"/>
-        <dynamics damping="0.0" friction="2000.0" />
-        <limit effort="0" lower="0" upper="0" velocity="0"/>
-    </joint>
+    <gazebo>
+        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+            <robotNamespace>/</robotNamespace>
+            <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+        </plugin>
+    </gazebo>
 
+    <gazebo reference="base_link">
+        <kp>${JOINT_KP}</kp>
+        <kd>${JOINT_KD}</kd>
+        <mu1>${JOINT_MU1}</mu1>
+        <mu2>${JOINT_MU2}</mu2>
+    </gazebo>
 
-    <!-- Transmission -->
-
-    <transmission name="torso_neck">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="torso_neck">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="motor13">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-    <transmission name="neck_head">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="neck_head">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-        </joint>
-        <actuator name="motor14">
-            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
-    </transmission>
-
+    <gazebo reference="torso">
+        <kp>${JOINT_KP}</kp>
+        <kd>${JOINT_KD}</kd>
+        <mu1>${JOINT_MU1}</mu1>
+        <mu2>${JOINT_MU2}</mu2>
+    </gazebo>
 </robot>
